@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <style>
+        table {
+            width: 80%;
+            margin: 0 auto;
+        }
+        td {
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            padding: 3px 5px;
+        }
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Users</h1>
+
+    <table cellspacing="0">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Email</th>
+            <th>Address</th>
+        </tr>
+
+        <% for(let i = 0; i < users.length; i++) { %> 
+            <tr>
+                <td><%= i %> </td>
+                <td><%= users[i].name %> </td>
+                <td><%= users[i].age %> </td>
+                <td><%= users[i].email %> </td>
+                <td><%= users[i].address %> </td>
+            </tr>
+        <% } %> 
+    </table>
+
+    <% if(admin === true) { %> 
+        <button>Edit</button>
+    <% } %> 
+
+    <script>
+        console.log("Ijaz's Demand")
+    </script>
+</body>
+</html>
